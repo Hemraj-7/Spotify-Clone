@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player</title>
+    <link rel="stylesheet" href="./css/utility.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container flex bg-black">
+        <div class="left">
+            <div class="close">
+                <img class="invert" src="./img/close.svg" alt="">
+            </div>
+            <div class="home bg-grey rounded m-1 p-1">
+                <div class="logo">
+                    <img width="100" class="invert" src="./img/logo.svg" alt="logo">
+                </div>
+                <ul>
+                    <li><img class="invert" src="./img/home.svg" alt="home">Home</li>
+                    <li><img class="invert" src="./img/search.svg" alt="home">Search</li>
+                </ul>
+            </div>
+            <div class="library bg-grey rounded m-1 p-1">
+                <div class="heading">
+                    <img class="invert" src="./img/playlist.svg" alt="">
+                    <h2>
+                        Your Library
+                    </h2>
+                </div>
+                <div class="songList">
+                    <ul>
+                    </ul>
+                </div>
+                <div class="footer">
+                    <div><a href="">Legal</a></div>
+                    <div><a href="">Privacy Center</a></div>
+                    <div><a href="">Privacy Policy</a></div>
+                    <div><a href="">Coockies</a></div>
+                    <div><a href="">Accessibility</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="right bg-grey rounded">
+            <div class="header">
+                <div class="nav flex items-center">
+                    <img class="invert hamburger" src="./img/hamburger.svg" alt="">
+                    <svg class="invert" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                        <path d="M15.293 3.293 6.586 12l8.707 8.707 1.414-1.414L9.414 12l7.293-7.293-1.414-1.414z" />
+                    </svg>
+                    <svg class="invert" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                        <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
+                    </svg>
+                </div>
+                <div class="buttons">
+                    <button class="signupbtn">Sign up</button>
+                    <button class="loginbtn">Log in</button>
+                </div>
+            </div>
+            <div class="spotifyPlaylists">
+                <h1>Spotify Playlists</h1>
+                <div class="cardContainer">
+                    <!-- <div data-folder="bollywood" class="card rounded">
+                        <div class="play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
+                                <circle id="circle" cx="12" cy="12" r="12" fill="#1fdf64" />
+                                <style>
+                                    #circle:hover {
+                                        fill: #00ff00;
+                                    }
+                                </style>
+                                <polygon points="9,8 17,12 9,16" fill="#000" />
+                            </svg>
+                        </div>
+                        <img src="./cardPictures/Happy Hits.jpeg" alt="">
+                        <h2>Happy Hits!</h2>
+                        <p>Hits to boost your mood and fill you with happiness!</p>
+                    </div>
+                    <div data-folder="lofi" class="card rounded">
+                        <div class="play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
+                                <circle id="circle" cx="12" cy="12" r="12" fill="#1fdf64" />
+                                <style>
+                                    #circle:hover {
+                                        fill: #00ff00;
+                                    }
+                                </style>
+                                <polygon points="9,8 17,12 9,16" fill="#000" />
+                            </svg>
+                        </div>
+                        <img src="./cardPictures/Happy Hits.jpeg" alt="">
+                        <h2>Happy Hits!</h2>
+                        <p>Hits to boost your mood and fill you with happiness!</p>
+                    </div> -->
+                    <div class="playbar">
+                        <div class="seekbar">
+                            <div class="circle">
+
+                            </div>
+                        </div>
+                        <div class="innerPlaybar">
+                            <div class="songInfo">
+
+                            </div>
+                            <div class="songButtons">
+                                <img width="28" id="previous" src="./img/previousSong.svg" alt="">
+                                <img width="28" id="play" src="./img/play.svg" alt="">
+                                <img width="28" id="next" src="./img/nextSong.svg" alt="">
+                            </div>
+                            <div class="timeVol">
+                                <div class="songTime">
+                                </div>
+                                <div class="volume">
+                                    <img width="28" src="./img/volume.svg" alt="">
+                                    <div class="range">
+                                        <input type="range" name="volume">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./js/script.js"></script>
+</body>
+
+</html>
+
+<!-- ( CTRL + SHIFT + R ) => For Hard Reload. -->
