@@ -20,9 +20,9 @@ function secondsToMinutesSeconds(seconds) {
 async function getSongs(folder) {
     currentFolder = folder;
     let a = await fetch(`./${folder}/`);
-    let responce = await a.text();
+    let response = await a.text();
     let div = document.createElement("div")
-    div.innerHTML = responce;
+    div.innerHTML = response;
     let as = div.getElementsByTagName("a")
     songs = []
     for (let index = 0; index < as.length; index++) {
@@ -76,11 +76,11 @@ const playMusic = (track, pause = false) => {
 
 async function displayAlbums() {
     // let a = await fetch(`./songs/`)
-    // let responce = await a.text();
+    // let response = await a.text();
     let a = await fetch(`/Spotify-Clone/songs/`);
     let response = await fetch(`/Spotify-Clone/songs/${folder}/info.json`);
     let div = document.createElement("div")
-    div.innerHTML = responce;
+    div.innerHTML = response;
     let anchors = div.getElementsByTagName("a")
     let cardContainer = document.querySelector(".cardContainer")
     let array = Array.from(anchors)
@@ -91,8 +91,8 @@ async function displayAlbums() {
             let folder = e.href.split("/").slice(-2)[0]
             // get the meta data of the folder
             let a = await fetch(`./songs/${folder}/info.json`)
-            let responce = await a.json();
-            console.log(responce);
+            let response = await a.json();
+            console.log(response);
             cardContainer.innerHTML = cardContainer.innerHTML + `<div data-folder="${folder}" class="card rounded">
             <div class="play">
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
@@ -106,8 +106,8 @@ async function displayAlbums() {
                 </svg>
             </div>
             <img src="/songs/${folder}/cover.jpeg" alt="" onerror="this.onerror=null; this.src='/songs/${folder}/cover.jpg';">
-            <h2>${responce.title}</h2>
-            <p>${responce.description}</p>
+            <h2>${response.title}</h2>
+            <p>${response.description}</p>
         </div>`
 
         }
