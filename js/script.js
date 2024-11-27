@@ -77,8 +77,8 @@ const playMusic = (track, pause = false) => {
 async function displayAlbums() {
     // let a = await fetch(`./songs/`)
     // let response = await a.text();
-    let a = await fetch(`/Spotify-Clone/songs/`);
-    let response = await fetch(`/Spotify-Clone/songs/${folder}`);
+    let a = await fetch(`/songs/`);
+    let response = await fetch(`/songs/${folder}`);
     let div = document.createElement("div")
     div.innerHTML = response;
     let anchors = div.getElementsByTagName("a")
