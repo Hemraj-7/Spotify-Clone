@@ -78,7 +78,7 @@ async function displayAlbums() {
     // let a = await fetch(`./songs/`)
     // let response = await a.text();
     let a = await fetch(`/Spotify-Clone/songs/`);
-    let response = await fetch(`/Spotify-Clone/songs/${folder}/info.json`);
+    let response = await fetch(`/Spotify-Clone/songs/${folder}`);
     let div = document.createElement("div")
     div.innerHTML = response;
     let anchors = div.getElementsByTagName("a")
