@@ -91,7 +91,7 @@ async function displayAlbums() {
             let a = await fetch(`./songs/${folder}/info.json`)
             let responce = await a.json();
             console.log(responce);
-            cardContainer.innerHTML = cardContainer.innerHTML + `<div data-folder="${folder}" class="card rounded">
+            cardContainer.innerHTML = cardContainer.innerHTML + `<div data-folder="folder" class="card rounded">
             <div class="play">
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
                     <circle id="circle" cx="12" cy="12" r="12" fill="#1fdf64" />
