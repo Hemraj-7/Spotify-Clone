@@ -75,8 +75,10 @@ const playMusic = (track, pause = false) => {
 }
 
 async function displayAlbums() {
-    let a = await fetch(`./songs/`)
-    let responce = await a.text();
+    // let a = await fetch(`./songs/`)
+    // let responce = await a.text();
+    let a = await fetch(`/Spotify-Clone/songs/`);
+    let response = await fetch(`/Spotify-Clone/songs/${folder}/info.json`);
     let div = document.createElement("div")
     div.innerHTML = responce;
     let anchors = div.getElementsByTagName("a")
@@ -86,7 +88,7 @@ async function displayAlbums() {
         const e = array[index];
         // if(e.href.startsWith(`http://127.0.0.1:3000/songs/`)) //same work as down if
         if (e.href.includes(`/songs`)) {
-            // let folder = e.href.split("/").slice(-2)[0]
+            let folder = e.href.split("/").slice(-2)[0]
             // get the meta data of the folder
             let a = await fetch(`./songs/${folder}/info.json`)
             let responce = await a.json();
